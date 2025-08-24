@@ -1,0 +1,43 @@
+{
+  "name": "ts-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "format": "prettier --check .",
+    "check": "pnpm typecheck && pnpm lint && pnpm markdown:lint",
+    "fix": "prettier --write . && eslint . --fix",
+    "markdown:lint": "markdownlint-cli2 \"**/*.md\" \"#node_modules\"",
+    "markdown:fix": "markdownlint-cli2 --fix \"**/*.md\" \"#node_modules\"",
+    "prepare": "lefthook install",
+    "dev:debug": "node --inspect-brk --loader tsx src/index.ts",
+    "clean": "rimraf dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.6.0",
+    "pnpm": ">=10"
+  },
+  "packageManager": "pnpm@10.15.0",
+  "devDependencies": {
+    "@commitlint/cli": "19.8.1",
+    "@commitlint/config-conventional": "19.8.1",
+    "@eslint/js": "^9.34.0",
+    "@types/node": "^24.3.0",
+    "eslint": "^9.34.0",
+    "lefthook": "^1.12.3",
+    "markdownlint-cli2": "^0.18.1",
+    "prettier": "^3.6.2",
+    "rimraf": "6.0.1",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2",
+    "typescript-eslint": "^8.40.0"
+  }
+}
