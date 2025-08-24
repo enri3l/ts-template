@@ -2,5 +2,5 @@
   "globs": ["**/*.md"],
   "ignores": ["**/node_modules", "**/dist"],
   "config": { "default": true },
-  "gitignore": ".gitignore",
+  "gitignore": ".gitignore"
 }
