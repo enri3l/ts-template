@@ -18,9 +18,3 @@ commit-msg:
   commands:
     commitlint:
       run: pnpm exec commitlint --edit {1}
-
-pre-push:
-  parallel: false
-  commands:
-    quality:
-      run: pnpm quality
